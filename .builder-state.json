@@ -1,0 +1,17 @@
+{
+  "phase": "scaffold_cloned",
+  "updated_at": "2026-08-23T23:57:43.927226+00:00",
+  "slug": "harvestly-case-hub",
+  "type": "shop",
+  "package": "harvestly.accessories.harvestlycasehub",
+  "prefix": "DOFIP",
+  "app_name": "Harvestly Case Hub",
+  "task_gid": "1217482143275991",
+  "task_name": "GB GW4 C1527",
+  "asana_url": "https://app.asana.com/1/1208304498069546/project/1213586227413017/task/1217482143275991",
+  "domain": "http://harvestly.casa/",
+  "company": "HARVESTLY LTD",
+  "repo_url": "https://github.com/ArtCode379/harvestly-case-hub",
+  "quality_status": "not_run",
+  "build_status": "not_run"
+}

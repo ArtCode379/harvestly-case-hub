@@ -2,54 +2,28 @@ package harvestly.accessories.harvestlycasehub.ui.composable.screen.checkout
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
-import harvestly.accessories.harvestlycasehub.R
+import androidx.compose.ui.unit.dp
 
 @Composable
-fun CheckoutDialog(
-    onConfirm: () -> Unit,
-) {
+fun CheckoutDialog(orderNumber: String, orderTotal: Double, onConfirm: () -> Unit) {
     AlertDialog(
         onDismissRequest = onConfirm,
-        confirmButton = {
-            TextButton(onClick = onConfirm) {
-                Text(text = stringResource(id = R.string.dofip_checkout_dialog_confirm))
-            }
-        },
-        title = {
-            Text(
-                text = stringResource(id = R.string.dofip_checkout_dialog_title),
-                style = MaterialTheme.typography.titleLarge,
-                fontWeight = FontWeight.Bold
-            )
-        },
+        confirmButton = { TextButton(onClick = onConfirm) { Text("View Orders") } },
+        title = { Text("Reservation confirmed", style = MaterialTheme.typography.titleLarge) },
         text = {
             Column(modifier = Modifier.fillMaxWidth()) {
-                Text(
-                    text = stringResource(id = R.string.dofip_checkout_success_message),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurface
-                )
+                Text("Order #$orderNumber", style = MaterialTheme.typography.headlineMedium, color = MaterialTheme.colorScheme.primary)
+                Text("Total £${"%.2f".format(orderTotal)}", fontWeight = FontWeight.Bold, modifier = Modifier.padding(top = 8.dp))
+                Text("Your items are reserved. We look forward to welcoming you in store within the next 24 hours.", modifier = Modifier.padding(top = 14.dp))
             }
-        },
-        containerColor = MaterialTheme.colorScheme.surface
+        }
     )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun CheckoutDialogPreview() {
-    MaterialTheme {
-        CheckoutDialog(
-            onConfirm = {}
-        )
-    }
 }

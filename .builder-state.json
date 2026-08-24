@@ -1,6 +1,6 @@
 {
-  "phase": "scaffold_cloned",
-  "updated_at": "2026-08-23T23:57:43.927226+00:00",
+  "phase": "github_push_started",
+  "updated_at": "2026-08-24T00:18:05.415509+00:00",
   "slug": "harvestly-case-hub",
   "type": "shop",
   "package": "harvestly.accessories.harvestlycasehub",
@@ -12,6 +12,15 @@
   "domain": "http://harvestly.casa/",
   "company": "HARVESTLY LTD",
   "repo_url": "https://github.com/ArtCode379/harvestly-case-hub",
-  "quality_status": "not_run",
-  "build_status": "not_run"
+  "quality_status": "passed",
+  "build_status": "passed",
+  "icon_primary": "#1A3A2A",
+  "icon_status": "imagegen",
+  "icon_error": "generate-icon.sh exited 1",
+  "quality_attempt": 2,
+  "quality_errors": 0,
+  "quality_result_file": "/tmp/harvestly-case-hub/quality-result.txt",
+  "build_exit_code": 0,
+  "build_result_file": "/tmp/harvestly-case-hub/build-result.txt",
+  "build_attempt": 2
 }
